@@ -1,6 +1,8 @@
 {
-  "publishConfig": {
-    "access": "public"
+  "npm": {
+    "publishConfig": {
+      "access": "public"
+    }
   },
   "git": {
     "commitMessage": "chore: release ${version}"
