@@ -1,46 +1,46 @@
 {
     "name": "release-it-jira-notes",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "release-it plugin to add links to JIRA issues in the release notes.",
     "type": "module",
     "exports": {
-      ".": "./index.js",
-      "./package.json": "./package.json"
+        ".": "./index.js",
+        "./package.json": "./package.json"
     },
     "scripts": {
-      "test": "echo 'test'",
-      "release": "release-it"
+        "test": "echo 'test'",
+        "release": "release-it"
     },
     "keywords": [
-      "release",
-      "release-it",
-      "release-it-plugin",
-      "plugin",
-      "jira",
-      "changelog"
+        "release",
+        "release-it",
+        "release-it-plugin",
+        "plugin",
+        "jira",
+        "changelog"
     ],
     "license": "MIT",
     "repository": {
-      "type": "git",
-      "url": "https://github.com/danidee10/release-it-jira-notes"
+        "type": "git",
+        "url": "https://github.com/danidee10/release-it-jira-notes"
     },
     "homepage": "https://github.com/danidee10/release-it-jira-notes#readme",
     "bugs": "https://github.com/danidee10/release-it-jira-notes/issues",
     "author": {
-      "name": "Osaetin Daniel",
-      "email": "osaetindaniel@gmail.com",
-      "url": "https://danidee10.github.io/"
+        "name": "Osaetin Daniel",
+        "email": "osaetindaniel@gmail.com",
+        "url": "https://danidee10.github.io/"
     },
     "dependencies": {
-      "conventional-changelog": "^5.1.0"
+        "@release-it/conventional-changelog": "^8.0.1"
     },
     "devDependencies": {
-      "release-it": "^17.0.0"
+        "release-it": "^17.0.0"
     },
     "peerDependencies": {
-      "release-it": "^17.0.0"
+        "release-it": "^17.0.0"
     },
     "engines": {
-      "node": ">=18"
+        "node": ">=18"
     }
-  }
+}
