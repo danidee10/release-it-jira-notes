@@ -8,7 +8,7 @@
       "./package.json": "./package.json"
     },
     "scripts": {
-      "test": "npm run test",
+      "test": "echo 'test'",
       "release": "release-it"
     },
     "keywords": [
@@ -42,14 +42,5 @@
     },
     "engines": {
       "node": ">=18"
-    },
-    "release-it": {
-      "hooks": {
-        "before:init": "npm test"
-      },
-      "github": {
-        "release": true,
-        "tokenRef": "GITHUB_TOKEN"
-      }
     }
   }
