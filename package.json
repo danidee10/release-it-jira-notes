@@ -1,5 +1,5 @@
 {
-    "name": "@release-it/jira-notes",
+    "name": "release-it-jira-notes",
     "version": "0.0.0",
     "description": "release-it plugin to add links to JIRA issues in the release notes.",
     "type": "module",
