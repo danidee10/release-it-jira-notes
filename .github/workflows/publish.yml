@@ -1,6 +1,6 @@
 name: Publish Package to npmjs
 on:
-  release:
+  main:
     types: [published]
 jobs:
   build:
