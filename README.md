@@ -1,6 +1,6 @@
 # release-it-jira-notes
 
-[![npm latest version](https://img.shields.io/npm/v/release-it-jira-notes/latest.svg)](https://www.npmjs.com/package/semantic-release-jira-notes)
+[![npm latest version](https://img.shields.io/npm/v/release-it-jira-notes/latest.svg)](https://www.npmjs.com/package/release-it-jira-notes)
 
 [**release-it**](https://github.com/release-it/release-it) plugin to add links to
 JIRA issues in the release notes.
