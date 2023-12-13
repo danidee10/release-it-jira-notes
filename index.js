@@ -36,8 +36,8 @@ one or more options are missing/misconfigured, Please configure them`
   }
 
   getInitialOptions(options, pluginName) {
-    let jiraHost = options.jiraHost
-    let ticketPrefixes = options.ticketPrefixes
+    let jiraHost = options[pluginName].jiraHost
+    let ticketPrefixes = options[pluginName].ticketPrefixes
 
     if (jiraHost === undefined) {
       jiraHost = process.env[jiraHostEnvironmentVariable]
