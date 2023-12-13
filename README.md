@@ -55,3 +55,6 @@ $ yarn add --dev release-it-jira-notes
 and
 
 `RELEASE_IT_JIRA_NOTES_JIRA_TICKET_PREFIXES` for `ticketPrefixes`
+
+
+This plugin is agnostic and will work with any `release-it` plugin that generates it's own changelog. You jut have to make sure you access the updated `changelog` after the `beforeRelease` hook

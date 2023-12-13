@@ -52,8 +52,16 @@ one or more options are missing/misconfigured, Please configure them`
     })
   }
 
-  beforeRelease() {
-    let changelog = this.config.getContext('changelog')
+  /* Override the changelog as early as possible
+  async getChangelog(latestVersion) {
+    const conventionalChangeLogPlugin = new ConventionalChangeLogPlugin(
+      {
+        namespace: '@release-it/conventional-changelog',
+        options: this.config.options,
+        container: { ...this },
+      }
+    )
+    let changelog = await conventionalChangeLogPlugin.getChangelog(latestVersion)
 
     const { jiraHost, ticketPrefixes } = this.options
 
@@ -62,6 +70,28 @@ one or more options are missing/misconfigured, Please configure them`
       changelog = changelog.replaceAll(regex, `[$1](https://${jiraHost}/browse/$1)`)
     }
 
+    this.debug('Updated changelog', changelog)
+    this.setContext({ changelog })
+    this.config.setContext({ changelog })
+
+    return changelog
+  }*/
+
+  jirafyChangelog(changelog, options) {
+    const { jiraHost, ticketPrefixes } = options
+
+    for (const prefix of ticketPrefixes) {
+      const regex = new RegExp(`(${prefix}-\\w+)`, 'g')
+      changelog = changelog.replaceAll(regex, `[$1](https://${jiraHost}/browse/$1)`)
+    }
+
+    return changelog
+  }
+
+  beforeRelease() {
+    let changelog = this.config.getContext('changelog')
+
+    changelog = this.jirafyChangelog(changelog, this.options)
     this.debug('Updated changelog', changelog)
 
     this.config.setContext({ changelog })
